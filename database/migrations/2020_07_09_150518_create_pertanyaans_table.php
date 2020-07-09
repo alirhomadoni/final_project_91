@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateJawabansTable extends Migration
+class CreatePertanyaansTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreateJawabansTable extends Migration
      */
     public function up()
     {
-        Schema::create('jawabans', function (Blueprint $table) {
+        Schema::create('pertanyaans', function (Blueprint $table) {
             $table->bigincrements('id');
+            $table->string('judul');
             $table->longText('isi');
             $table->date('tanggal_dibuat')->nullable();
             $table->date('tanggal_diperbaharui')->nullable();
-            $table->timestamps();
+            $table->integer('votes');
         });
     }
 
@@ -29,6 +30,6 @@ class CreateJawabansTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('jawabans');
+        Schema::dropIfExists('pertanyaans');
     }
 }
