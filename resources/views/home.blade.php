@@ -16,7 +16,11 @@
 
                     {{ __('You are logged in!') }}
                 </div>
+                
             </div>
+            </br></br>
+            <a class ="btn btn-dark" href="/list">Lihat List Pertanyaan</a><!--link untuk menuju ke list pertanyaan-->
+            <a class ="btn btn-dark" href="/list">Buat Pertanyaan Baru</a><!--link untuk menuju ke list pertanyaan-->
         </div>
     </div>
 </div>
