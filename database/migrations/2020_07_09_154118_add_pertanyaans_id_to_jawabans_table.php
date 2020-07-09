@@ -14,7 +14,7 @@ class AddPertanyaansIdToJawabansTable extends Migration
     public function up()
     {
         Schema::table('jawabans', function (Blueprint $table) {
-            $table->unsignedBigInteger('users_id');
+            $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('pertanyaan_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('pertanyaan_id')->references('id')->on('pertanyaans')->onDelete('cascade');
