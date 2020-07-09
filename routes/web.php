@@ -20,3 +20,16 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//Route Coba-Coba nanti bakal dihapus
+Route::get('/list', function(){
+    return view('final_project.list');
+}); //nyoba list section
+
+Route::get('/form', function(){
+    return view('final_project.form');
+});
+
+Route::get('/edit', function(){
+    return view('final_project.edit');
+});
