@@ -19,8 +19,8 @@
                 
             </div>
             </br></br>
-            <a class ="btn btn-dark" href="/list">Lihat List Pertanyaan</a><!--link untuk menuju ke list pertanyaan-->
-            <a class ="btn btn-dark" href="/list">Buat Pertanyaan Baru</a><!--link untuk menuju ke list pertanyaan-->
+            <a class ="btn btn-dark" href="/pertanyaan">Lihat List Pertanyaan</a><!--link untuk menuju ke list pertanyaan-->
+            <a class ="btn btn-dark" href="/form">Buat Pertanyaan Baru</a><!--link untuk menuju ke list pertanyaan-->
         </div>
     </div>
 </div>

@@ -63,7 +63,7 @@
                                         {{ __('Logout') }}
                                     </a>
 
-                                    <a class="dropdown-item" href="/list">
+                                    <a class="dropdown-item" href="/pertanyaan">
                                         {{ __('List Pertanyaan') }}
                                     </a>
 
