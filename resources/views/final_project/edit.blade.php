@@ -20,9 +20,19 @@
               <button class="btn btn-outline-primary mb-3 ml-3">Back</button>
             </a>         
           </div>
+          <?php 
+          $isi=$pertanyaan->isi;
+          $foo = 123;
+      echo "<script type=\"text/javascript\">\n";
+      echo "var isi = \"${isi}\" ;\n";
+      echo "console.log('value is:' + isi);\n";
+      echo "</script>\n";
+          ?>
 @endsection
 @push('scripts')
-<script>
+<script type="text/javascript">
   CKEDITOR.replace('isi');
+  CKEDITOR.instances['isi'].setData(isi);
+  
 </script>
 @endpush

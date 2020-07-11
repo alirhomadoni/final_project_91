@@ -24,31 +24,6 @@
               <button class="btn btn-outline-primary mb-3 ml-3">Back</button>
             </a>
           </div>
-          <?php
-
-function jsLogs($data) {
-    $html = "";
-    $coll;
-
-    if (is_array($data) || is_object($data)) {
-        $coll = json_encode($data);
-    } else {
-        $coll = $data;
-    }
-
-    $html = "<script>console.log('PHP: ${coll}');</script>";
-
-    echo($html);
-    # exit();
-}
-jsLogs("testing string"); #PHP: testing string
-
-# For Array
-jsLogs(array("test1", "test2")); # PHP: ["test1","test2"]
-
-# For Object
-jsLogs(array("test1"=>array("subtest1", "subtest2")));
-?>
 @endsection
 @push('scripts')
 <script>
