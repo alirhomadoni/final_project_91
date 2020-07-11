@@ -7,28 +7,16 @@
               <label for="">Judul Pertanyaan</label>
               <input class="form-control" type="text" name="judul">
               <label for="">Pertanyaan Baru</label>
-<<<<<<< HEAD
-              <textarea class="form-control" id="isi" name="isi" rows="10" cols="50"></textarea>
-=======
               <textarea name="isi"></textarea>
->>>>>>> 168da812f08019e9b5a963d0fbf8f58388a0fcab
               <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
               <input type="hidden" name="votes" value="0">
               <br>
               <button type="submit" class="btn btn-primary mb-3 ml-3">Create</button> <br>
-<<<<<<< HEAD
-=======
-
->>>>>>> 168da812f08019e9b5a963d0fbf8f58388a0fcab
             </form>
           </form>
             <a href="{{ url('/pertanyaan') }}">
               <button class="btn btn-outline-primary mb-3 ml-3">Back</button>
             </a>
-<<<<<<< HEAD
-        </div>
-@endsection
-=======
             <!-- <script>
               var options = {
                 filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
@@ -46,4 +34,3 @@
   CKEDITOR.replace('isi');
 </script>
 @endpush
->>>>>>> 168da812f08019e9b5a963d0fbf8f58388a0fcab

@@ -10,13 +10,9 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-<<<<<<< HEAD
-    <script src="{{ asset('js/app.js') }}" defer></script>
-=======
     <!-- <script src="{{ asset('js/app.js') }}" defer></script> -->
     <script src="{{ asset('//cdn.ckeditor.com/4.6.2/standard/ckeditor.js') }}"></script>
     <!-- <script src="https://cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script> -->
->>>>>>> 168da812f08019e9b5a963d0fbf8f58388a0fcab
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
