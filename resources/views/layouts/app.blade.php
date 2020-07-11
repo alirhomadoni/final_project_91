@@ -69,7 +69,7 @@
                                         {{ __('List Pertanyaan') }}
                                     </a>
 
-                                    <a class="dropdown-item" href="/form">
+                                    <a class="dropdown-item" href="/pertanyaan/create">
                                         {{ __('Buat Pertanyaan Baru') }}
                                     </a>
 
