@@ -8,6 +8,8 @@
 
               <label for="">Judul Pertanyaan</label>
               <input class="form-control" type="text" name="judul" value="{{$pertanyaan->judul}}">
+              <label for="">Edit Tag (gunakan pemisah koma antar tag)</label>
+              <input class="form-control" type="text" name="tag" value="{{$pertanyaan->tag}}">
               <label for="">Edit Pertanyaan</label>
               <textarea id="isi" name="isi"></textarea>
 

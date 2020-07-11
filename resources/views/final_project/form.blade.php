@@ -6,6 +6,8 @@
               @csrf
               <label for="">Judul Pertanyaan</label>
               <input class="form-control" type="text" name="judul">
+              <label for="">Tag (gunakan pemisah koma antar tag)</label>
+              <input class="form-control" type="text" name="tag">
               <label for="">Pertanyaan Baru</label>
               <textarea name="isi"></textarea>
               <input type="hidden" name="user_id" value="{{Auth::user()->id}}">

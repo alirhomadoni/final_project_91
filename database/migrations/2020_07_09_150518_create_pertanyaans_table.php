@@ -16,6 +16,7 @@ class CreatePertanyaansTable extends Migration
         Schema::create('pertanyaans', function (Blueprint $table) {
             $table->bigincrements('id');
             $table->string('judul');
+            $table->string('tag')->nullable();
             $table->longText('isi');
             $table->date('tanggal_dibuat')->nullable();
             $table->date('tanggal_diperbaharui')->nullable();

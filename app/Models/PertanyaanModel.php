@@ -35,6 +35,7 @@ Class PertanyaanModel{
                     ->where('id',$id)
                     ->update([
                         'judul'=> $request['judul'],
+                        'tag' => $request['tag'],
                         'isi' => $request['isi'],
                         'tanggal_diperbaharui'=>$now
                     ]);
