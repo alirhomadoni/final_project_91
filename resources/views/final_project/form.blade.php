@@ -2,11 +2,7 @@
 @section('content')
 <div class="ml-3 mt-3 mr-3">
         <div class="card card-primary">
-<<<<<<< HEAD
             <form role="form" action="/pertanyaan" method="POST">
-=======
-            <form role="form" action="/form" method="POST">
->>>>>>> e91845c05ff6630051ceb98c66cf1c259606c7a8
               @csrf
               <label for="">Judul Pertanyaan</label>
               <input class="form-control" type="text" name="judul">
