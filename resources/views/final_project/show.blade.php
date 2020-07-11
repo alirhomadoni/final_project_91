@@ -46,7 +46,7 @@
     <div class="list-group-item list-group-item-action flex-column align-items-start">
     <h4>{{$jawaban->user_name}}</h4>
     <div class="d-flex w-100 justify-content-between">
-      <p class="mb-1">{{$jawaban->isi}}</p> 
+      {!!$jawaban->isi!!} 
       <small class="mb-1">{{$jawaban->tanggal_dibuat}}</small>
     </div>
     </div>
