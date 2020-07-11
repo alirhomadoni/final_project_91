@@ -9,7 +9,8 @@
               <label for="">Judul Pertanyaan</label>
               <input class="form-control" type="text" name="judul" value="{{$pertanyaan->judul}}">
               <label for="">Edit Pertanyaan</label>
-              <input type="text"  class="form-control" name="isi" id="txtArea" value="{{$pertanyaan->isi}}">
+              <textarea name="isi"></textarea>
+
               <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
               <input type="hidden" name="votes" value="{{$pertanyaan->votes}}">
               <br>
@@ -20,3 +21,8 @@
             </a>         
           </div>
 @endsection
+@push('scripts')
+<script>
+  CKEDITOR.replace('isi');
+</script>
+@endpush

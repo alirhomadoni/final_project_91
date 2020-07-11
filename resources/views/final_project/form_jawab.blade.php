@@ -23,5 +23,9 @@
             <a href="{{ url('/pertanyaan') }}">
               <button class="btn btn-outline-primary mb-3 ml-3">Back</button>
             </a>
+<<<<<<< HEAD
         </div>
+=======
+          </div>
+>>>>>>> 168da812f08019e9b5a963d0fbf8f58388a0fcab
 @endsection

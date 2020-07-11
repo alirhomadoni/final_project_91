@@ -18,7 +18,11 @@
                 </div>
                 
             </div>
+<<<<<<< HEAD
+            </br></br>
+=======
             <br><br>
+>>>>>>> 0f32461b05605d7bca4a65a8ac4778902eef8e51
             <a class ="btn btn-dark" href="/pertanyaan">Lihat List Pertanyaan</a><!--link untuk menuju ke list pertanyaan-->
             <a class ="btn btn-dark" href="/form">Buat Pertanyaan Baru</a><!--link untuk menuju ke list pertanyaan-->
         </div>
