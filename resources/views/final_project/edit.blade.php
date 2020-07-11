@@ -9,7 +9,7 @@
               <label for="">Judul Pertanyaan</label>
               <input class="form-control" type="text" name="judul" value="{{$pertanyaan->judul}}">
               <label for="">Edit Pertanyaan</label>
-              <textarea name="isi"></textarea>
+              <textarea id="isi" name="isi"></textarea>
 
               <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
               <input type="hidden" name="votes" value="{{$pertanyaan->votes}}">

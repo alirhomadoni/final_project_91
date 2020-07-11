@@ -13,7 +13,7 @@
     <small> by : {{$pertanyaan->user_name}}</small>
     <!-- isi pertanyaan -->
     <div class="d-flex w-100 justify-content-between">
-        <p >{{$pertanyaan->isi}} </p>
+        {!!$pertanyaan->isi!!} 
     </div>
     <!-- menghitung jumlah response masing2 pertanyaan -->
     <?php

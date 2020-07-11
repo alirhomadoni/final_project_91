@@ -8,7 +8,7 @@
       <small class="mb-1">{{$pertanyaan->tanggal_dibuat}}</small>
     </div>
     <div class="w-100 justify-content-between">
-      <p class="mb-1">{{$pertanyaan->isi}}</p>
+      {!!$pertanyaan->isi!!}
     </div>
 
 <!-- menghitung jumlah response masing2 pertanyaan -->

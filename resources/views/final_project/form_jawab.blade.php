@@ -12,7 +12,7 @@
             <form role="form" action="/pertanyaan/{{$pertanyaan->id}}/jawab/success" method="POST">
               @csrf
               <label for="">Jawab</label>
-              <textarea class="form-control" name="isi" id="" cols="30" rows="10"></textarea>
+              <textarea class="form-control" name="isi" id="isi" cols="30" rows="10" style="visibility:visible"></textarea>
               <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
               <input type="hidden" name="pertanyaan_id" value="{{$pertanyaan->id}}">
 
