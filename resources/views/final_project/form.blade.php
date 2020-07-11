@@ -12,7 +12,6 @@
               <input type="hidden" name="votes" value="0">
               <br>
               <button type="submit" class="btn btn-primary mb-3 ml-3">Create</button> <br>
-
             </form>
           </form>
             <a href="{{ url('/pertanyaan') }}">
