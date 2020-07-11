@@ -17,37 +17,28 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
 //Route Coba-Coba nanti bakal dihapus
-Route::get('/pertanyaan', 'PertanyaanController@index'); //nyoba list section
-Route::get('/pertanyaan/create', 'PertanyaanController@create');
-Route::post('/pertanyaan', 'PertanyaanController@store'); 
-Route::get('/pertanyaan/{id}','PertanyaanController@show');
-Route::get('/pertanyaan/{id}/edit','PertanyaanController@edit');
-Route::put('/pertanyaan/{id}','PertanyaanController@update');
-route::get('/pertanyaan/{id}/jawab','JawabanController@create');
-Route::post('/pertanyaan/{id}/jawab/success','JawabanController@store');
-Route::delete('/pertanyaan/{id}','PertanyaanController@destroy');
-
-Route::get('/temp',function(){
-    return view('final_project.temp');
+Route::group(['middleware'=>'auth'],function(){
+    Route::get('/pertanyaan', 'PertanyaanController@index'); //nyoba list section
+    Route::get('/pertanyaan/create', 'PertanyaanController@create');
+    Route::post('/pertanyaan', 'PertanyaanController@store'); 
+    Route::get('/pertanyaan/{id}','PertanyaanController@show');
+    Route::get('/pertanyaan/{id}/edit','PertanyaanController@edit');
+    Route::put('/pertanyaan/{id}','PertanyaanController@update');
+    route::get('/pertanyaan/{id}/jawab','JawabanController@create');
+    Route::post('/pertanyaan/{id}/jawab/success','JawabanController@store');
+    Route::delete('/pertanyaan/{id}','PertanyaanController@destroy');
+    Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/temp',function(){
+        return view('final_project.temp');
+    });
+ 
+    
 });
 
 // Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
 //     \UniSharp\LaravelFilemanager\Lfm::routes();
 // });
 
-Route::get('/form', function(){
-    return view('final_project.form');
-});
+Auth::routes();
 
-Route::get('/edit', function(){
-    return view('final_project.edit');
-});
