@@ -31,7 +31,7 @@ class PertanyaanController extends Controller
     public function show($id){
         $pertanyaans=PertanyaanModel::get_all();
         $jawabans=JawabanModel::get_all();
-    
+        //dd ($pertanyaans,$jawabans);
         foreach ($pertanyaans as $key => $value) {
             if($value->id==$id){
                 $pertanyaan=$value;

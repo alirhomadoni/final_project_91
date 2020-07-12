@@ -2,19 +2,19 @@
 @section('content')
 <div class="ml-3 mt-3 mr-3">
         <div class="card card-primary">
-            <form role="form" action="/pertanyaan/{{$pertanyaan->id}}" method="POST">
+            <form role="form" action="/pertanyaan/{{$pertanyaan[0]->id}}" method="POST">
               @csrf
               @method('PUT')
 
               <label for="">Judul Pertanyaan</label>
-              <input class="form-control" type="text" name="judul" value="{{$pertanyaan->judul}}">
+              <input class="form-control" type="text" name="judul" value="{{$pertanyaan[0]->judul}}">
               <label for="">Edit Tag (gunakan pemisah koma antar tag)</label>
-              <input class="form-control" type="text" name="tag" value="{{$pertanyaan->tag}}">
+              <input class="form-control" type="text" name="tag" value="{{$pertanyaan[0]->tag}}">
               <label for="">Edit Pertanyaan</label>
               <textarea id="isi" name="isi"></textarea>
 
               <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
-              <input type="hidden" name="votes" value="{{$pertanyaan->votes}}">
+              <input type="hidden" name="votes" value="{{$pertanyaan[0]->votes}}">
               <br>
               <button type="submit" class="btn btn-primary mb-3 ml-3">Update</button> <br>
             </form>
@@ -23,7 +23,7 @@
             </a>         
           </div>
           <?php 
-          $isi=$pertanyaan->isi;
+          $isi=$pertanyaan[0]->isi;
           $foo = 123;
       echo "<script type=\"text/javascript\">\n";
       echo "var isi = \"${isi}\" ;\n";

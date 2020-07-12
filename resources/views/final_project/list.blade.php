@@ -41,6 +41,7 @@
         </form>
         @endif
     </div>
+    </div >
   </div> 
 </br>
 @endforeach

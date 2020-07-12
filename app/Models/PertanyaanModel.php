@@ -25,7 +25,11 @@ Class PertanyaanModel{
         return $new_pertanyaan;
     }
     public static function find_by_id($id){
-        $pertanyaan=DB::table('pertanyaans')->where('id', $id)->first();
+        $pertanyaan=DB::table('pertanyaans')
+                    ->select('pertanyaans.*', 'users.name as user_name', 'users.id as user_id')
+                    ->where('pertanyaans.id','=', $id)
+                    ->join('users','pertanyaans.user_id','=','users.id')
+                    ->get();
         return $pertanyaan;
     }
     public static function update($id, $request){

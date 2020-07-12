@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Route Coba-Coba nanti bakal dihapus
+
 Route::group(['middleware'=>'auth'],function(){
     Route::get('/pertanyaan', 'PertanyaanController@index'); //nyoba list section
     Route::get('/pertanyaan/create', 'PertanyaanController@create');
@@ -42,3 +42,8 @@ Route::group(['middleware'=>'auth'],function(){
 
 Auth::routes();
 
+//Route Coba-Coba nanti bakal dihapus
+route::get('/pertanyaan/komentar/{user_id}/{pertanyaan_id}', 'KomentarController@show_pertanyaan_komentar');
+route::get('/jawaban/komentar/{user_id}/{jawaban_id}', 'KomentarController@show_jawaban_komentar');
+route::post('/pertanyaan/komentar/create', 'KomentarController@store');
+route::post('/jawaban/komentar/create', 'KomentarController@store');

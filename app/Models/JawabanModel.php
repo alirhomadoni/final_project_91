@@ -23,7 +23,11 @@ Class JawabanModel{
         return $new_jawaban;
     }
     public static function find_by_id($id){
-        $jawabans=DB::table('jawabans')->where('pertanyaan_id', $id)->get();
+        $jawabans=DB::table('jawabans')
+                    ->select('jawabans.*', 'users.name as user_name', 'users.id as user_id')
+                    ->where('jawabans.id','=', $id)
+                    ->join('users','jawabans.user_id','=','users.id')
+                    ->get();
         return $jawabans;
         
     }

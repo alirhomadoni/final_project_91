@@ -3,18 +3,18 @@
 
 <div class="ml-3 mt-3 mr-3">
 <div class= "container card card-primary">
-              <h3>{{$pertanyaan->judul}}</h3>
+              <h3>{{$pertanyaan[0]->judul}}</h3>
               <br>
-              <p>{!!$pertanyaan->isi!!}</p>
+              <p>{!!$pertanyaan[0]->isi!!}</p>
 </div>
 <br><br>
         <div class="card card-primary">
-            <form role="form" action="/pertanyaan/{{$pertanyaan->id}}/jawab/success" method="POST">
+            <form role="form" action="/pertanyaan/{{$pertanyaan[0]->id}}/jawab/success" method="POST">
               @csrf
               <label for="">Jawab</label>
               <textarea class="form-control" name="isi" id="isi" cols="30" rows="10" style="visibility:visible"></textarea>
               <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
-              <input type="hidden" name="pertanyaan_id" value="{{$pertanyaan->id}}">
+              <input type="hidden" name="pertanyaan_id" value="{{$pertanyaan[0]->id}}">
 
               <input type="hidden" name="votes" value="0">
               <br>
